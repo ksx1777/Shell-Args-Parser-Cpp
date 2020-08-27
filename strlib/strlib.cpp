@@ -2,15 +2,12 @@
 
 int strCmp(char firstStr[], char secStr[]){
     int len = slen(firstStr);
-    if(len != slen(secStr)){
-        return 1;
-    }
     for(int i = 0; i < len; i++){
         if(firstStr[i] != secStr[i]){
             return 1;
         }
     }
-    return 0;
+    return len - slen(firstStr);
     /* RETORNA "1" CASO AS STRINGS SEJAM DIFERENTES, E "0" SE FOREM IGUAIS*/
 }
 
